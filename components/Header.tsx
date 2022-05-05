@@ -1,8 +1,8 @@
-import styles from '../styles/Home.module.scss'
+import styles from './Header.module.scss'
 
 function Header ()  {
   return (
-    <header className={styles.header}>All rights reserved. &copy;</header>
+    <header className={styles.header}>Dummie header &copy;</header>
     )
 }
 
