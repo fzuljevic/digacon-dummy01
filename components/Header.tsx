@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.scss'
 
 function Header ()  {
   return (
-      <header className={styles["page__header"]}>Dummie header</header>
+    <header className={styles.header}>All rights reserved. &copy;</header>
     )
 }
 
