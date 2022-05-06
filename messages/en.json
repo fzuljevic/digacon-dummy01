@@ -1,5 +1,7 @@
 {
     "home":{
-        "welcome": "Welcome to page!"
+        "welcome": "Welcome to page!",
+        "header" : "Trial Title of Test Page",
+        "footer" : "All rights reserved."
     }
 }

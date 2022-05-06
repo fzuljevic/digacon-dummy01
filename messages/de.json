@@ -1,5 +1,7 @@
 {
     "home":{
-        "welcome": "Willkommen auf der Seite!"
+        "welcome": "Willkommen auf der Seite!",
+        "header" : "Versuchstitel Testseite",
+        "footer" : "Alle Rechte vorbehalten."
     }
 }
