@@ -1,6 +1,6 @@
 import { ScriptProps } from "next/script";
 import Footer from "./Footer";
-import Header from "./header";
+import Header from "./Header";
 
 function Layout ({children}: ScriptProps){
     return(
