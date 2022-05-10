@@ -1,20 +1,19 @@
 import { useTranslations } from 'next-intl';
-import styles from './Header.module.scss'
+import styles from './Header.module.scss';
+import React from 'react';
 
-function Header ()  {
-  const t = useTranslations('home')
+function Header() {
+  const t = useTranslations('home');
 
-  return (
-    <header className={styles.header}>{t('header')}</header>
-    )
+  return <header className={styles.header}>{t('header')}</header>;
 }
 
-export default Header
+export default Header;
 
-export async function getStaticProps({locale} : any) {
+export async function getStaticProps(locale: string) {
   return {
     props: {
-      messages: (await import(`../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
   };
 }

@@ -1,33 +1,32 @@
-import type {  NextPage } from 'next'
-import React, { useEffect, useState } from 'react'
-import { useTranslations } from 'next-intl'
-import styles from '../styles/Home.module.scss'
-import ProductList from '../products/ProductList'
+import type { NextPage } from 'next';
+import React from 'react';
+// import { useTranslations } from 'next-intl'
+import styles from '../styles/Home.module.scss';
+import ProductList from '../products/ProductList';
 
 const Home: NextPage = () => {
-  const t = useTranslations('home')
-  const [products, setProducts]= useState([])
+  // const t = useTranslations('home')
 
   return (
     <>
       <main className={styles.main}>
         {/* <div></div>{t('welcome')} */}
-        <ProductList/>
-       </main>
+        <ProductList />
+      </main>
     </>
-  )
-}
+  );
+};
 
 type tr = {
-  locale: string
-}
+  locale: string;
+};
 
-export async function getStaticProps({locale} : tr) {
+export async function getStaticProps({ locale }: tr) {
   return {
     props: {
-      messages: (await import(`../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
   };
 }
 
-export default Home
+export default Home;

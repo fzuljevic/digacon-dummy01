@@ -1,7 +1,7 @@
 {
-    "home":{
-        "welcome": "Welcome to page!",
-        "header" : "Trial Title of Test Page",
-        "footer" : "All rights reserved."
-    }
+  "home": {
+    "welcome": "Welcome to page!",
+    "header": "Trial Title of Test Page",
+    "footer": "All rights reserved."
+  }
 }
