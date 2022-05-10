@@ -4,31 +4,32 @@ $line-color: rgb(214, 214, 214);
     margin: 1rem;
     box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.4);
     border-radius: 13px;
+
+    &__img {
+        height: 320px;
+        width: 277px;
+        margin: 30px;
+    }
+
+    &__price {
+        margin-left: 38px;
+        font-size: 25px;
+    }
 }
 
-.card__img{
-    height: 320px;
-    width: 277px;
-    margin: 30px;
-}
-
-.card__text{
+.card__text {
     height: 300px;
     width: 327px;
+
     h2{
         margin: 10px 0 0 38px;
         padding-top: 52px;
         font-size: 22px;
     }
-    h3{
+
+    h3 {
         margin: 10px 30px 0 38px;
         font-size: 17px;
         border-top: 1px solid $line-color;
     }
-}
-
-
-.card__price{
-    margin-left: 38px;
-    font-size: 25px;
 }
