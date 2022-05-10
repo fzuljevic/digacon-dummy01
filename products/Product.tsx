@@ -7,13 +7,11 @@ function Product(props: ProductType) {
 
   return (
     <div className={styles.card}>
-      <div className={styles.img_wrapper}>
-        <img className={styles.product_img} src={image} alt={title} />
-      </div>
-      <div className={styles.product_text}>
+      <img className={styles.card__img} src={image} alt={title} />
+      <div className={styles.card__text}>
         <h2>{title}</h2>
         <h3>{category}</h3>
-        <span className={styles.product_price}>$ {price}</span>
+        <span className={styles.card__price}>$ {price}</span>
       </div>
     </div>
   );
