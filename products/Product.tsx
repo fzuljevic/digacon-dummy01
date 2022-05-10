@@ -1,6 +1,7 @@
 import styles from './Product.module.scss'
+import { ProductType } from '../types/ProductData' 
 
-function Product  (props: {title: string, id: number, category:string, price: number, image: string}){
+function Product  (props: ProductType){
 
   const { title, category, price, image } = props
 
