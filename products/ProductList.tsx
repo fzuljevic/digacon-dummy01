@@ -1,19 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { ProductType } from "../types/ProductData";
 import Product from "./Product";
 
 function ProductList (){
   
     const [products, setProducts]= useState([])
-
-    interface Prod {
-        id:          number;
-        title:       string;
-        price:       number;
-        description: string;
-        category:    string;
-        image:       string;
-        rating:      number;
-    }
 
     useEffect(() => {
       fetch('https://fakestoreapi.com/products')
@@ -31,14 +22,14 @@ function ProductList (){
 
     return(
     <>
-      {products.map((product: Prod)=> (
-          <Product key={product.id}
-          title={product.title}
-          category={product.category}
-          price={product.price}
-          id={product.id}
-          image={product.image}
-          />   
+      {products.map((product: ProductType)=> (
+        <Product key={product.id}
+        title={product.title}
+        category={product.category}
+        price={product.price}
+        id={product.id}
+        image={product.image} description={""} rating={0}
+        />   
       ))}
     </>
     )
