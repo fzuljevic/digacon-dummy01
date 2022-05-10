@@ -1,15 +1,16 @@
-import { ScriptProps } from "next/script";
-import Footer from "./Footer";
-import Header from "./Header";
+import { ScriptProps } from 'next/script';
+import Footer from './Footer';
+import Header from './Header';
+import React from 'react';
 
-function Layout ({children}: ScriptProps){
-    return(
-        <>
-        <Header/>
-        { children }
-        <Footer/>
-        </>
-    )
+function Layout({ children }: ScriptProps) {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
 }
 
-export default Layout
+export default Layout;

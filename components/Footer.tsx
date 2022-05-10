@@ -1,11 +1,13 @@
 import { useTranslations } from 'next-intl';
 import styles from './Footer.module.scss'
+import React from 'react';
 
 function Footer ()  {
   const t = useTranslations('home')
 
-  return (
-    <footer className={styles.footer}>{t('footer')} &copy;</footer>
+  return (<>
+      <footer className={styles.footer}>{t('footer')} &copy;</footer>
+    </>
     )
 }
 
