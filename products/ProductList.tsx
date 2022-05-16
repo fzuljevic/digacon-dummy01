@@ -1,23 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { ProductType } from '../types/ProductData';
 import Product from './Product';
+import { getProductData, getProductError } from '../redux/connectFunctions';
+import { fetchProducts } from '../redux/actions';
 
 function ProductList() {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+
+  const productsData = useSelector(getProductData);
+  const productsError = useSelector(getProductError);
+
+  // useEffect(() => {
+  //   fetch('https://fakestoreapi.com/products')
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProducts(data);
+  //     });
+  // }, []);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
+    dispatch(fetchProducts());
   }, []);
 
-  if (!products) return <div>Loading ...</div>;
+  if (!productsError) return <div>{productsError}</div>;
 
   return (
     <>
-      {products.map((product: ProductType) => (
+      {/* {productsData.map((product: ProductType) => (
         <Product
           key={product.id}
           title={product.title}
@@ -28,7 +39,7 @@ function ProductList() {
           description={''}
           rating={0}
         />
-      ))}
+      ))} */}
     </>
   );
 }
